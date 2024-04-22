@@ -1,0 +1,22 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  profiles:
+    active: local
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///C:/Users/amorf/git_local_repo
+          # On Windows, you need an extra "/" in the file URL if it is absolute with a drive prefix (for example,file:///${user.home}/config-repo). 공식문서 참고
+          default-label: master
+
+          #uri: [깃허브 url] public
+          #username:[아이디] private
+          #password:[비밀번호] private
+
+
+
